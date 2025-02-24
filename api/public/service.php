@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include 'includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 <style>
     .overlay {
@@ -860,5 +860,5 @@ $faqs = [
 </style>
 <?php
 
-include 'includes/footer.php';
+include __DIR__ . '/../includes/footer.php';
 ?>

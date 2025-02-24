@@ -1,7 +1,6 @@
 <?php
 ob_start();
-require_once __DIR__ . '/../../vendor/autoload.php';
-// include __DIR__ . '/../vendor/autoload.php';
+include __DIR__ . '/../vendor/autoload.php';
 // require __DIR__ . '/../vendor/autoload.php';
 
 use Google\Client;

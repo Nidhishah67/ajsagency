@@ -7,6 +7,7 @@ use Google\Client;
 use Google\Service\Sheets;
 
 putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/publiccredentials.json');
 
 function addToGoogleSheet($data)
 {

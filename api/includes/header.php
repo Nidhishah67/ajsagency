@@ -82,7 +82,7 @@
             <!-- Logo -->
             <div class="logo flex items-center">
                 <a href="<?php echo $base_url; ?>">
-                <img src="<?php echo $base_url; ?>assets/images/headerlogo.png" alt="AJSAgency">
+                <img src="assets/images/headerlogo.png" alt="AJSAgency">
 
                 </a>
             </div>

@@ -1,11 +1,12 @@
 <?php
 ob_start();
-require __DIR__ . '/../vendor/autoload.php';
+include __DIR__ . '/../vendor/autoload.php';
+// require __DIR__ . '/../vendor/autoload.php';
 
 use Google\Client;
 use Google\Service\Sheets;
 
-putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/public/credentials.json');
 
 function EmailSubscirbeGoogleSheet($data)
 {

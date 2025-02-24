@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include __DIR__ . '/../includes/header.php';
-require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use Google\Client;
 use Google\Service\Sheets;

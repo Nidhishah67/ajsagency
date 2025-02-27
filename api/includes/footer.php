@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscribeemail"]) && $
         <div>
             <div class="logo flex py-4">
                 <a href="">
-                    <img src="<?php echo $base_url; ?>/images/mainlogo2.png" style="width: 150px;" alt="AJSAgency">
+                    <img src="assets/images/mainlogo2.png" style="width: 150px;" alt="AJSAgency">
                 </a>
             </div>
             <p class="text-lg mb-4 custom-selection">

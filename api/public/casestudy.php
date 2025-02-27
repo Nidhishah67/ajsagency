@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include __DIR__ . '/../includes/header.php';
+include 'includes/header.php';
 $caseStudies = [
     [
         "image" => "assets/images/casestudy1.jfif",
@@ -93,7 +93,7 @@ $caseStudies = [
     <div class="container mx-auto px-4 relative z-10 text-center">
         <h1 class="text-5xl sm:text-4xl md:text-8xl font-bold leading-tight tracking-tight animate-fadeIn">
             Unleashing Potential
-            <span class="block text-yellow-300 mt-2">Through Innovative Case Studies</span>
+            <span class="block text-highlight mt-2">Through Innovative Case Studies</span>
         </h1>
         <p class="text-sm sm:text-lg md:text-2xl mt-4 mb-6 sm:mb-8 text-gray-200  mx-auto font-light animate-fadeIn">
             Discover how our tailored solutions have transformed challenges into <br />success stories across diverse
@@ -115,7 +115,7 @@ $caseStudies = [
 <section id="case-studies" class="case-study-content py-16 pt-28 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-6xl font-bold text-gray-800 mb-2">Our Success Stories</h2>
+            <h2 class="text-6xl font-bold  mb-2 text-textPrimary">Our Success Stories</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 Explore how we've transformed businesses across various industries through innovative solutions and
                 strategic approaches.
@@ -199,7 +199,7 @@ $caseStudies = [
 <section class="testimonials py-16 pt-16 bg-gray-50">
     <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-            <h2 class="text-4xl sm:text-4xl md:text-5xl font-bold mb-2" style="color: #1d4ed8;">
+            <h2 class="text-4xl sm:text-4xl md:text-5xl font-bold mb-2 text-textPrimary">
                 Success Stories from Our Clients
             </h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
@@ -373,32 +373,32 @@ $caseStudies = [
 <?php
 $faqs = [
     [
-        'question' => 'What is digital marketing, and how can it help my business?',
-        'answer' => 'Digital marketing promotes your business online through SEO, social media, paid ads, and email marketing. It helps you reach more customers, boost brand awareness, and increase sales.'
+        'question' => 'Why does my business need digital marketing?',
+        'answer' => 'Today, customers search for products and services online. Digital marketing helps your business get noticed, engage customers, and boost revenue through powerful strategies like SEO, ads, and social media.'
     ],
     [
-        'question' => 'How long does it take to build a website?',
-        'answer' => 'A simple website takes about 2-4 weeks, while a custom web application can take a few months, depending on features and complexity.'
+        'question' => 'Do you manage social media accounts?',
+        'answer' => 'Yes! We create engaging posts, schedule content, and interact with your audience on platforms like Facebook, Instagram, and LinkedIn.'
     ],
     [
-        'question' => 'Can you redesign my existing website?',
-        'answer' => '  Of course! We can give your website a fresh, modern look with improved usability and performance.'
+        'question' => 'How long does it take to build or redesign a website?',
+        'answer' => 'A basic website takes 2-4 weeks, while more complex websites may take longer. If you have an existing website, we can redesign it for a fresh look, better speed, and improved performance.'
     ],
     [
-        'question' => 'What data solutions do you provide?',
-        'answer' => 'We offer data analysis, database management, data visualization, and cloud-based storage solutions to help businesses make informed decisions.'
+        'question' => 'What are data solutions, and how can they help my business?',
+        'answer' => 'Data solutions allow us to extract valuable information from various online sources, helping your business analyze trends, understand competitors, and make better marketing and business decisions.'
     ],
     [
-        'question' => 'What bookkeeping services do you offer?',
-        'answer' => 'We manage financial records, track income and expenses, handle invoicing, and prepare financial reports.'
+        'question' => 'Why should I care about bookkeeping?',
+        'answer' => 'Keeping track of finances ensures everything is in order, avoids last-minute stress, helps with budgeting, and keeps financial goals on track. It’s all about financial peace of mind!'
     ],
     [
-        'question' => 'Why is financial planning important?',
-        'answer' => 'Financial planning helps you save money, invest wisely, manage risks, and secure your future financial goals.'
+        'question' => 'How can financial planning improve financial security?',
+        'answer' => 'A: With a good plan, you can spend wisely, save for the future, reduce financial risks, and ensure financial stability without unnecessary stress.'
     ],
     [
-        'question' => 'Do you offer investment advice?',
-        'answer' => 'Yes! We provide expert guidance on smart investments, retirement planning, and wealth management.'
+        'question' => 'Why should I choose AJ’s Agency?',
+        'answer' => 'We provide custom strategies, expert solutions, affordable pricing, and real results to help businesses grow online.'
     ],
 ];
 ?>
@@ -477,7 +477,7 @@ $faqs = [
             to achieve your goals. Let's connect and discuss how we can help you reach new heights.
         <div class="mt-6"> <!-- Added margin-top for spacing -->
             <a href="<?php echo $base_url; ?>contactus"
-                class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
+                class="bg-highlight text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
                 Contact Us Now
             </a>
         </div>
@@ -505,5 +505,5 @@ $faqs = [
 
 <?php
 
-include __DIR__ . '/../includes/footer.php';
+include 'includes/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include __DIR__ . '/../includes/header.php';
+include 'includes/header.php';
 ?>
 <style>
     .overlay {
@@ -42,7 +42,7 @@ include __DIR__ . '/../includes/header.php';
     <div class="container mx-auto px-4 relative z-10 text-center">
         <h1 class="text-5xl sm:text-4xl md:text-8xl font-bold leading-tight tracking-tight animate-fadeIn">
             Transforming Digital
-            <span class="block text-yellow-300 mt-2">Landscapes with Precision</span>
+            <span class="block text-highlight mt-2">Landscapes with Precision</span>
         </h1>
         <p class="text-sm sm:text-lg md:text-2xl mt-4 mb-6 sm:mb-8 text-gray-200 mx-auto font-light animate-fadeIn">
             We blend innovative technology with strategic thinking to deliver <br /> exceptional digital solutions that
@@ -51,7 +51,7 @@ include __DIR__ . '/../includes/header.php';
 
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fadeIn">
             <a href="<?php echo $base_url; ?>contactus"
-                class="px-6 py-3 bg-yellow-300 text-indigo-600 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-lg">
+                class="px-6 py-3 bg-highlight border-2 border-highlight  text-maintext rounded-full font-semibold hover:bg-highlight transition-all duration-300">
                 Get Started
             </a>
             <a href="<?php echo $base_url; ?>service"
@@ -114,7 +114,7 @@ include __DIR__ . '/../includes/header.php';
     <!-- Section Header -->
     <div class="container mx-auto px-4 mb-16">
         <div class="text-center max-w-3xl mx-auto">
-            <h2 class="text-4xl font-bold font-heading mb-6 animate-slide-up" style="color: #1d4ed8;">
+            <h2 class="text-5xl font-bold font-heading mb-6 animate-slide-up text-textPrimary">
                 Where Passion Meets Innovation
             </h2>
         </div>
@@ -128,7 +128,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <i class="fas fa-rocket text-2xl text-blue-500"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">The Spark of a Dream</h3>
+                <h3 class="text-2xl font-bold mb-4 text-black">The Spark of a Dream</h3>
                 <p class="text-gray-600">
                     We didn't start with a business plan. We started with a burning desire to solve real problems. Born
                     from late-night conversations and shared frustrations, our agency emerged from a simple belief:
@@ -140,7 +140,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                     <i class="fas fa-lightbulb text-2xl text-green-500"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Beyond Solutions, Creating Possibilities</h3>
+                <h3 class="text-2xl font-bold mb-4 text-black">Beyond Solutions, Creating Possibilities</h3>
                 <p class="text-gray-600">
                     Every project is more than a contract—it's a partnership. We don't just deliver services; we craft
                     experiences that transform businesses. Our team doesn't ask "What can we do?" but "What could be
@@ -151,7 +151,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <i class="fas fa-chart-line text-2xl text-purple-500"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Evolving, Always Learning</h3>
+                <h3 class="text-2xl font-bold mb-4 text-black">Evolving, Always Learning</h3>
                 <p class="text-gray-600">
                     The moment we think we know everything is the moment we become obsolete. We embrace uncertainty,
                     celebrate learning, and view every challenge as an opportunity to grow, innovate, and redefine
@@ -162,7 +162,7 @@ include __DIR__ . '/../includes/header.php';
                 <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
                     <i class="fas fa-handshake text-2xl text-yellow-500"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Building Trust, One Step at a Time</h3>
+                <h3 class="text-2xl font-bold mb-4 text-black">Building Trust, One Step at a Time</h3>
                 <p class="text-gray-600">
                     Success isn’t just about innovation—it’s about trust. We believe in transparent communication,
                     reliability, and long-term partnerships. Every project we take on is a commitment to delivering
@@ -176,7 +176,7 @@ include __DIR__ . '/../includes/header.php';
 <section class="mission-values py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-2" style="color: #1d4ed8;">
+            <h2 class="text-4xl font-bold mb-2 text-textPrimary">
                 Our Mission & Core Values
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -194,7 +194,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-blue-600 mb-4">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Our Mission</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Our Mission</h4>
                     <p class="text-gray-600">
                         To revolutionize digital landscapes by delivering cutting-edge solutions that transform
                         challenges into opportunities, empowering businesses to achieve unprecedented growth and
@@ -205,7 +205,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-green-600 mb-4">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Passion-Driven</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Passion-Driven</h4>
                     <p class="text-gray-600">
                         e approach every project with genuine passion, believing that true innovation stems from deep
                         commitment and emotional investment in our clients' success.
@@ -215,7 +215,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-purple-600 mb-4">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Innovative Spirit</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Innovative Spirit</h4>
                     <p class="text-gray-600">
                         We continuously push boundaries, embracing emerging technologies and creative thinking to
                         deliver solutions that are not just effective, but transformative.
@@ -225,7 +225,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-red-500 mb-4">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Collaborative Approach</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Collaborative Approach</h4>
                     <p class="text-gray-600">
                         We believe in the power of collaboration, bringing together diverse talents to create holistic
                         solutions.
@@ -235,7 +235,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-yellow-500 mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Integrity First</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Integrity First</h4>
                     <p class="text-gray-600">
                         Transparency, honesty, and ethical practices are the foundation of every relationship we build.
                     </p>
@@ -244,7 +244,7 @@ include __DIR__ . '/../includes/header.php';
                     <div class="text-3xl text-indigo-500 mb-4">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Continuous Growth</h4>
+                    <h4 class="text-xl font-semibold mb-3 text-black">Continuous Growth</h4>
                     <p class="text-gray-600">
                         We are committed to constant learning, adapting, and evolving in the dynamic digital landscape.
                     </p>
@@ -308,7 +308,7 @@ include __DIR__ . '/../includes/header.php';
         </p>
         <div class="pt-10"> <!-- Added margin-top for spacing -->
             <a href="<?php echo $base_url; ?>contactus"
-                class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
+                class="bg-highlight text-white px-6 py-3 rounded-full font-semibold hover:bg-highlight transition-all duration-300 shadow-lg">
                 Get Started Today
             </a>
         </div>
@@ -335,5 +335,5 @@ include __DIR__ . '/../includes/header.php';
 </style>
 <?php
 ob_start();
-include __DIR__ . '/../includes/footer.php';
+include 'includes/footer.php';
 ?>

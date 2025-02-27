@@ -1,12 +1,11 @@
 <?php
 ob_start();
-include __DIR__ . '/../vendor/autoload.php';
-// require __DIR__ . '/../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use Google\Client;
 use Google\Service\Sheets;
 
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/public/credentials.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
 
 function EmailSubscirbeGoogleSheet($data)
 {
@@ -17,7 +16,7 @@ function EmailSubscirbeGoogleSheet($data)
     $client->setAccessType('offline');
 
     $service = new Sheets($client);
-    $spreadsheetId = "1lH3GYVAcK2PVW9hFxp62dypaLpKyoWIz9gzrnPd1-8c"; // Replace with your sheet ID
+    $spreadsheetId = "1bid_DOHoTTovk143U2bhGSDIf4pnOeQXsIiakhBcruM"; // Replace with your sheet ID
     $range = "EmailSubscribe!A:B"; // Adjust based on your sheet structure
 
     $body = new Google_Service_Sheets_ValueRange([
@@ -63,9 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscribeemail"]) && $
     <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Company Info -->
         <div>
-            <div class="logo flex">
+            <div class="logo flex py-4">
                 <a href="">
-                    <img src="assets/images/logo.png" style="width: 250px;" alt="AJSAgency">
+                    <img src="assets/images/mainlogo2.png" style="width: 150px;" alt="AJSAgency">
                 </a>
             </div>
             <p class="text-lg mb-4 custom-selection">
@@ -73,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscribeemail"]) && $
                 and cutting-edge technology.
             </p>
             <div class="mt-4 space-y-3">
-                <a href="<?php echo $base_url; ?>contactus" class="btn-primary inline-block px-4 py-2 rounded-lg">
+                <a href="<?php echo $base_url; ?>contactus" class="bg-highlight text-black inline-block px-4 py-2 rounded-lg">
                     Schedule Consultation
                 </a>
                 <div class="flex items-center space-x-2">
@@ -164,9 +163,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subscribeemail"]) && $
                 <p class="text-sm mb-2">Subscribe to our newsletter for updates</p>
                 <form class="flex" method="post">
                     <input type="email" id="subscribeemail" name="subscribeemail" placeholder="Enter your email"
-                        class="w-full px-3 py-2 rounded-l-lg text-text-primary">
+                        class="w-full px-3 py-2 rounded-l-lg text-black">
 
-                    <button type="submit" class="btn-primary px-4 rounded-r-lg">Subscribe</button>
+                    <button type="submit" class="bg-highlight text-black px-4 rounded-r-lg">Subscribe</button>
                 </form>
             </div>
 

@@ -1,14 +1,12 @@
 <?php
 ob_start();
-include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../../vendor/autoload.php';
-
+include 'includes/header.php';
+require 'vendor/autoload.php';
 
 use Google\Client;
 use Google\Service\Sheets;
 
-// putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/credentials.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
 
 function addToGoogleSheet($data)
 {
@@ -19,7 +17,7 @@ function addToGoogleSheet($data)
     $client->setAccessType('offline');
 
     $service = new Sheets($client);
-    $spreadsheetId = "1lH3GYVAcK2PVW9hFxp62dypaLpKyoWIz9gzrnPd1-8c"; // Replace with your sheet ID
+    $spreadsheetId = "1bid_DOHoTTovk143U2bhGSDIf4pnOeQXsIiakhBcruM"; // Replace with your sheet ID
     $range = "ContactForm!A:H"; // Adjust based on your sheet structure
 
     $body = new Google_Service_Sheets_ValueRange([
@@ -95,20 +93,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
     <div class="container mx-auto px-4 relative z-10 text-center">
         <h1 class="text-5xl sm:text-4xl md:text-8xl font-bold leading-tight tracking-tight animate-fadeIn">
             Connect with Us
-            <span class="block text-yellow-300 mt-2">Your Journey Starts Here</span>
+            <span class="block text-highlight mt-2">Your Journey Starts Here</span>
         </h1>
         <p class="text-sm sm:text-lg md:text-2xl mt-4 mb-6 sm:mb-8 text-gray-200  mx-auto font-light animate-fadeIn">
             We are here to assist you with any inquiries. Let’s work together to achieve your goals!
         </p>
-        <blockquote id="dailyQuote" class="text-lg italic text-yellow-300 mb-6">
+        <blockquote id="dailyQuote" class="text-lg italic text-highlight mb-6">
             <!-- Quote will be inserted here by JavaScript -->
         </blockquote>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fadeIn">
-            <a href="#contact-form"
-                class="px-6 py-3 bg-yellow-300 text-indigo-600 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-lg">
-                Get in Touch
+            <a href="<?php echo $base_url; ?>contactus"
+                class="px-6 py-3 bg-highlight border-2 border-highlight  text-maintext rounded-full font-semibold hover:bg-highlight transition-all duration-300">
+                Get Started
             </a>
-            <a href="<?php echo $base_url; ?>services"
+            <a href="<?php echo $base_url; ?>service"
                 class="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                 View Services
             </a>
@@ -148,41 +146,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="firstname" class="block text-sm font-medium text-gray-700 mb-2">First Name<span class="text-red-500">*</span></label>
-                <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" class="w-full px-4 py-3 rounded-lg outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" class="w-full px-4 py-3 rounded-lg text-black outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
               </div>
               <div>
                 <label for="lastname" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" class="w-full px-4 py-3 rounded-lg outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
+                <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" class="w-full px-4 py-3 rounded-lg text-black outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
               </div>
             </div>
            
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address<span class="text-red-500">*</span></label>
-              <input type="email" id="email" name="email" placeholder="Enter Email" class="w-full px-4 py-3 rounded-lg outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
+              <input type="email" id="email" name="email" placeholder="Enter Email" class="w-full px-4 py-3 rounded-lg text-black outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
-                <input type="text" id="company" name="company" placeholder="Enter First Name" class="w-full px-4 py-3 rounded-lg outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
+                <input type="text" id="company" name="company" placeholder="Enter Company Name" class="w-full px-4 py-3 rounded-lg text-black outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
               </div>
               <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number<span class="text-red-500">*</span></label>
-                <input type="text" id="phone" name="phone" placeholder="Enter Last Name" class="w-full px-4 py-3 rounded-lg outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
+                <input type="text" id="phone" name="phone" placeholder="Enter Last Name" class="w-full px-4 py-3 rounded-lg text-black outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
               </div>
             </div>
           
 
             <div>
             <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject<span class="text-red-500">*</span></label>
-            <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="w-full px-4 py-3 rounded-lg  outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
+            <input type="text" id="subject" name="subject" placeholder="Enter Subject" class="w-full px-4 py-3 rounded-lg text-black  outline-none border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required>
             </div>
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message<span class="text-red-500">*</span></label>
-              <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" class="w-full px-4 py-3 outline-none rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" class="w-full px-4 py-3 outline-none rounded-lg text-black border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors" required></textarea>
             </div>
 
-            <button type="submit" name="submit" class="w-full bg-blue-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+            <button type="submit" name="submit" class="w-full bg-blue-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg text-black transition-colors">
             Get Quote / Contact Our Experts
             </button>
           </form>
@@ -192,14 +190,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
         <div class="space-y-8 lg:pl-8 animate-slide-left">
           <!-- Contact Methods -->
           <div class="bg-gray-100 rounded-2xl border border-gray-100 p-8">
-            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+            <h3 class="text-2xl font-bold mb-6 text-black">Contact Information</h3>
             <div class="space-y-6">
               <div class="flex items-start space-x-4">
                 <div class="w-10 h-10  flex items-center justify-center flex-shrink-0">
                   <i class="fas fa-phone text-2xl text-blue-500"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold mb-1">Phone</h4>
+                  <h4 class="font-semibold mb-1 text-black">Phone</h4>
                   <p class="text-gray-700 custom-selection">+91 7878 141436</p>
                 </div>
               </div>
@@ -209,7 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
                   <i class="fas fa-envelope text-2xl text-blue-500"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold mb-1">Email</h4>
+                  <h4 class="font-semibold mb-1 text-black">Email</h4>
                   <a href="mailto:ajay@ajsagency.co" class="text-gray-700 custom-selection hover:underline" title="Mail To">ajay@ajsagency.co</a>
                 </div>
               </div>
@@ -218,7 +216,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
                   <i class="fas fa-location-dot text-2xl text-blue-500"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold mb-1">Office</h4>
+                  <h4 class="font-semibold mb-1 text-black">Office</h4>
                   <p class="text-gray-700 custom-selection">S-2, Momai Complex, Near Poojara Telecom, Opp SBI Bank, Khodiyar
                   Colony,Jamnagar - 361006.</p>
                 </div>
@@ -228,15 +226,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
 
           <!-- Business Hours -->
           <div class="bg-gray-100 rounded-2xl border border-gray-100 p-8">
-            <h3 class="text-2xl font-bold mb-6">Business Hours</h3>
+            <h3 class="text-2xl font-bold mb-6 text-black">Business Hours</h3>
             <div class="space-y-4">
               <div class="flex justify-between">
                 <span class="text-gray-700">Monday - Saturday</span>
-                <span class="font-semibold">9:30 AM - 08:00 PM</span>
+                <span class="font-semibold text-black">9:30 AM - 08:00 PM</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-gray-700">Sunday</span>
-                <span class="font-semibold">Closed</span>
+                <span class="font-semibold text-black">Closed</span>
               </div>
             </div>
           </div>
@@ -261,5 +259,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
     </div>
 </section>
 <?php
-include __DIR__ . '/../includes/footer.php';
+include 'includes/footer.php';
 ?>

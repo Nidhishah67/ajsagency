@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include __DIR__ . '/../includes/header.php';
+include 'includes/header.php';
 ?>
 <style>
     .overlay {
@@ -41,13 +41,13 @@ include __DIR__ . '/../includes/header.php';
     </div>
     <div class="container mx-auto px-4 relative z-10 text-center">
         <div class="mb-8 animate-fade-in-up">
-            <span class="text-sm uppercase tracking-wider bg-white/20 px-4 py-2 rounded-full inline-block">
+            <span class="text-sm uppercase tracking-wider text-white px-4 py-2 rounded-full inline-block">
                 Our Professional Services
             </span>
         </div>
         <h1 class="text-5xl sm:text-4xl md:text-8xl font-bold leading-tight tracking-tight animate-fadeIn">
             Transforming Businesses
-            <span class="block text-yellow-300 mt-2">Through Innovative Digital Solutions</span>
+            <span class="block text-highlight mt-2">Through Innovative Digital Solutions</span>
         </h1>
         <p class="text-sm sm:text-lg md:text-2xl mt-4 mb-6 sm:mb-8 text-gray-200  mx-auto font-light animate-fadeIn">
             Empowering your business with cutting-edge digital strategies,<br /> comprehensive financial planning,
@@ -56,7 +56,7 @@ include __DIR__ . '/../includes/header.php';
 
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fadeIn">
             <a href="#service-details"
-                class="btn-primary bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all transform hover:-translate-y-1 shadow-lg">
+                class="btn-primary bg-highlight border-2 border-highlight text-blue-600 px-8 py-4 rounded-lg hover:bg-highlight transition-all transform hover:-translate-y-1 shadow-lg">
                 Explore Our Services
             </a>
             <a href="<?php echo $base_url; ?>contactus"
@@ -69,137 +69,142 @@ include __DIR__ . '/../includes/header.php';
 
 
 </section>
-<section id="service-details" class="py-16 pt-28 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-6xl font-bold text-center mb-2 section-title">Our Services</h2>
-        <p class="text-lg text-center mb-8">
-            At AJ's Agency, we offer a wide range of services designed to help your business thrive in the digital
-            landscape.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
-            <!-- Digital Marketing -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-blue-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-bullhorn text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Digital Marketing</h3>
+<section class="mb-16 pt-28 p-5 min-h-screen">
+    <h2 class="text-6xl font-extrabold text-center mb-2 text-textPrimary section-title">Our Services</h2>
+    <p class="text-lg text-center text-black mb-4">
+        At AJ's Agency, we offer a wide range of services designed <br /> to help your business thrive in the digital
+        landscape.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
+        <!-- Digital Marketing -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-blue-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-bullhorn text-blue-600 text-3xl"></i>
                 </div>
-                <p class="text-gray-600 mb-4">
-                    Boost your online presence and engage your audience with our tailored digital marketing strategies.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Social Media Marketing</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Content Marketing</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>SEO Optimization</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>PPC Advertising</li>
-                </ul>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Digital Marketing</h3>
             </div>
-
-
-            <!-- Web Development -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-green-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-code text-green-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Web Development</h3>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Create stunning, responsive websites that provide an exceptional user experience and drive
-                    conversions.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Custom Website Design</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>E-commerce Solutions</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Content Management Systems</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Website Maintenance</li>
-                </ul>
-            </div>
-
-            <!-- Web Design -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-purple-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-paint-brush text-purple-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Web Design</h3>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Enhance user experience with visually appealing and user-friendly designs that reflect your brand
-                    identity.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Responsive Design</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>UI/UX Design</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Branding and Identity</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Prototyping and Wireframing</li>
-                </ul>
-            </div>
-
-            <!-- Data Scraping -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-yellow-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-database text-yellow-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Data Solutions</h3>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Extract valuable data from various sources to gain insights and make informed business decisions.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Web Data Extraction</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Market Research</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Competitive Analysis</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Data Cleaning and Processing</li>
-                </ul>
-            </div>
-
-            <!-- Bookkeeping -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-red-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-file-invoice-dollar text-red-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Bookkeeping</h3>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Keep your financial records organized and up-to-date with our professional bookkeeping services.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Monthly Financial Statements</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Accounts Payable and Receivable</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Tax Preparation and Filing</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Financial Reporting</li>
-                </ul>
-            </div>
-
-            <!-- Financial Planning -->
-            <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-purple-500">
-                <div class="flex items-center mb-4">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-chart-line text-purple-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 ml-4">Financial Planning</h3>
-                </div>
-                <p class="text-gray-600 mb-4">
-                    Achieve your financial goals with our comprehensive financial planning services tailored to your
-                    needs.
-                </p>
-                <ul class="space-y-2 text-gray-700">
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Investment Strategy Development</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Retirement Planning</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Budget Planning and Management</li>
-                    <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Risk Assessment and Mitigation</li>
-                </ul>
-            </div>
+            <p class="text-gray-600 mb-4">
+                Boost your online presence and engage your audience with our tailored digital marketing strategies.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Social Media Marketing</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Content Marketing</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>SEO Optimization</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>PPC Advertising</li>
+            </ul>
         </div>
+
+
+        <!-- Web Development -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-green-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-code text-green-600 text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Web Development</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+                Create stunning, responsive websites that provide an exceptional user experience and drive
+                conversions.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Custom Website Design</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>E-commerce Solutions</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Content Management Systems</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Website Maintenance</li>
+            </ul>
+        </div>
+
+        <!-- Web Design -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-purple-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-paint-brush text-purple-600 text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Web Design</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+                Enhance user experience with visually appealing and user-friendly designs that reflect your brand
+                identity.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Responsive Design</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>UI/UX Design</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Branding and Identity</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Prototyping and Wireframing</li>
+            </ul>
+        </div>
+
+        <!-- Data Scraping -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-yellow-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-database text-yellow-600 text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Data Solutions</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+                Extract valuable data from various sources to gain insights and make informed business decisions.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Web Data Extraction</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Market Research</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Competitive Analysis</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Data Cleaning and Processing</li>
+            </ul>
+        </div>
+
+        <!-- Bookkeeping -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-red-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-file-invoice-dollar text-red-600 text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Bookkeeping</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+                Keep your financial records organized and up-to-date with our professional bookkeeping services.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Monthly Financial Statements</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Accounts Payable and Receivable</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Tax Preparation and Filing</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Financial Reporting</li>
+            </ul>
+        </div>
+
+        <!-- Financial Planning -->
+        <div class="service-card bg-gray-100 p-6 rounded-lg border border-gray-100 hover:border-purple-500">
+            <div class="flex items-center mb-4">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-chart-line text-purple-600 text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 ml-4">Financial Planning</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+                Achieve your financial goals with our comprehensive financial planning services tailored to your
+                needs.
+            </p>
+            <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Investment Strategy Development</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Retirement Planning</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Budget Planning and Management</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Risk Assessment and Mitigation</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="flex justify-center space-x-6 animate-fadeIn">
+        <a href="<?php echo $base_url; ?>service"
+            class="bg-highlight text-black py-3 px-6 rounded-lg shadow-lg hover:scale-105 inline-block hover:bg-highlight transition-all">
+            Our Services
+        </a>
     </div>
 </section>
 <section class="why-choose py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-2 section-title">Get Results with Our Proven Solutions</h2>
+        <h2 class="text-4xl font-bold text-center mb-2 section-title text-textPrimary">Get Results with Our Proven Solutions</h2>
         <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">
             We understand that your business is unique, and so are your needs. That's why we offer a comprehensive range
             of services, tailored to help you achieve your goals and surpass your expectations.
@@ -298,7 +303,7 @@ include __DIR__ . '/../includes/header.php';
 <section class="pricing py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-center mb-2 section-title">Flexible Solutions, Tailored to Your Needs
+            <h2 class="text-4xl font-bold text-center mb-2 section-title text-textPrimary">Flexible Solutions, Tailored to Your Needs
             </h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
                 We believe in providing value-driven solutions that grow with your business. Our pricing is as unique as
@@ -448,7 +453,7 @@ include __DIR__ . '/../includes/header.php';
                         <i class="fas fa-shield-alt text-blue-600 text-4xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold" style="color: #1d4ed8; margin-bottom: 0.5rem;">
+                        <h3 class="text-2xl font-bold text-textPrimary" style="margin-bottom: 0.5rem;">
                             Flexible Pricing Guarantee
                         </h3>
                         <p class="text-gray-600">
@@ -510,7 +515,7 @@ include __DIR__ . '/../includes/header.php';
 <section class="testimonials py-16 pt-16 bg-gray-50">
     <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-            <h2 class="text-4xl sm:text-4xl md:text-5xl font-bold mb-2" style="color: #1d4ed8;">
+            <h2 class="text-4xl sm:text-4xl md:text-5xl font-bold mb-2 text-textPrimary">
                 Success Stories from Our Clients
             </h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
@@ -685,32 +690,32 @@ include __DIR__ . '/../includes/header.php';
 <?php
 $faqs = [
     [
-        'question' => 'What is digital marketing, and how can it help my business?',
-        'answer' => 'Digital marketing promotes your business online through SEO, social media, paid ads, and email marketing. It helps you reach more customers, boost brand awareness, and increase sales.'
+        'question' => 'Why does my business need digital marketing?',
+        'answer' => 'Today, customers search for products and services online. Digital marketing helps your business get noticed, engage customers, and boost revenue through powerful strategies like SEO, ads, and social media.'
     ],
     [
-        'question' => 'How long does it take to build a website?',
-        'answer' => 'A simple website takes about 2-4 weeks, while a custom web application can take a few months, depending on features and complexity.'
+        'question' => 'Do you manage social media accounts?',
+        'answer' => 'Yes! We create engaging posts, schedule content, and interact with your audience on platforms like Facebook, Instagram, and LinkedIn.'
     ],
     [
-        'question' => 'Can you redesign my existing website?',
-        'answer' => '  Of course! We can give your website a fresh, modern look with improved usability and performance.'
+        'question' => 'How long does it take to build or redesign a website?',
+        'answer' => 'A basic website takes 2-4 weeks, while more complex websites may take longer. If you have an existing website, we can redesign it for a fresh look, better speed, and improved performance.'
     ],
     [
-        'question' => 'What data solutions do you provide?',
-        'answer' => 'We offer data analysis, database management, data visualization, and cloud-based storage solutions to help businesses make informed decisions.'
+        'question' => 'What are data solutions, and how can they help my business?',
+        'answer' => 'Data solutions allow us to extract valuable information from various online sources, helping your business analyze trends, understand competitors, and make better marketing and business decisions.'
     ],
     [
-        'question' => 'What bookkeeping services do you offer?',
-        'answer' => 'We manage financial records, track income and expenses, handle invoicing, and prepare financial reports.'
+        'question' => 'Why should I care about bookkeeping?',
+        'answer' => 'Keeping track of finances ensures everything is in order, avoids last-minute stress, helps with budgeting, and keeps financial goals on track. It’s all about financial peace of mind!'
     ],
     [
-        'question' => 'Why is financial planning important?',
-        'answer' => 'Financial planning helps you save money, invest wisely, manage risks, and secure your future financial goals.'
+        'question' => 'How can financial planning improve financial security?',
+        'answer' => 'A: With a good plan, you can spend wisely, save for the future, reduce financial risks, and ensure financial stability without unnecessary stress.'
     ],
     [
-        'question' => 'Do you offer investment advice?',
-        'answer' => 'Yes! We provide expert guidance on smart investments, retirement planning, and wealth management.'
+        'question' => 'Why should I choose AJ’s Agency?',
+        'answer' => 'We provide custom strategies, expert solutions, affordable pricing, and real results to help businesses grow online.'
     ],
 ];
 ?>
@@ -801,7 +806,7 @@ $faqs = [
 
             <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Transform Your Vision
-                <span class="block text-yellow-400 mt-2">Into Remarkable Results</span>
+                <span class="block text-highlight mt-2">Into Remarkable Results</span>
             </h2>
 
             <p class="text-xl md:text-2xl mb-10 text-black max-w-3xl mx-auto">
@@ -860,5 +865,5 @@ $faqs = [
 </style>
 <?php
 
-include __DIR__ . '/../includes/footer.php';
+include 'includes/footer.php';
 ?>

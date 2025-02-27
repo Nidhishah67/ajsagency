@@ -17,7 +17,7 @@ $file_path = __DIR__ . "/public/$page.php";
 if (file_exists($file_path)) {
     include $file_path;
 } else {
-    include 'includes/header.php';
-    include 'includes/footer.php';
+    include __DIR__ . '/includes/header.php';
+    include __DIR__ . '/includes/footer.php';
     exit();
 }

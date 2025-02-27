@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include 'includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 <style>
     .overlay {

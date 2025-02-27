@@ -810,5 +810,5 @@ $faqs = [
 
 
 <?php
-include 'includes/footer.php';
+include __DIR__ . '/../includes/footer.php';
 ?>

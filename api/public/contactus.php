@@ -261,5 +261,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["firstname"]) && $_POST
     </div>
 </section>
 <?php
-include 'includes/footer.php';
+include __DIR__ . '/../includes/footer.php';
 ?>

@@ -335,5 +335,5 @@ include __DIR__ . '/../includes/header.php';
 </style>
 <?php
 ob_start();
-include 'includes/footer.php';
+include __DIR__ . '/../includes/footer.php';
 ?>

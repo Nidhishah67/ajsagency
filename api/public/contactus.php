@@ -2,14 +2,13 @@
 ob_start();
 
 include __DIR__ . '/../includes/header.php';
-include __DIR__ . '/../../vendor/autoload.php';
+include __DIR__ . '/../vendor/autoload.php';
 
 
 use Google\Client;
 use Google\Service\Sheets;
 
-putenv('GOOGLE_APPLICATION_CREDENTIALS=public/credentials.json');
-
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/../public/credentials.json');
 function addToGoogleSheet($data)
 {
     $client = new Client();
